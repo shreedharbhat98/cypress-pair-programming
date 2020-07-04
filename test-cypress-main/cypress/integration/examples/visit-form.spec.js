@@ -17,12 +17,4 @@ describe("Visit the page", () => {
 
     cy.get(".label").should("have.css", "color", "rgb(0, 128, 0)");
   });
-
-  it("delete task from todos", () => {
-    cy.get(".task-input").type("Do some task").type("{enter}");
-
-    cy.get(".deleteBtn").click();
-
-    cy.get(".task-list li").should("have.length", 0);
-  });
 });
